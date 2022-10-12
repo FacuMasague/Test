@@ -1,0 +1,255 @@
+@media (max-width: 1201px) {
+}
+
+@media (max-width: 769px) {
+    /* Header */
+
+    header{
+        grid-template-areas: 0.25fr 1.75fr;
+    }
+
+    /* Index */
+
+    .index__info{
+        div{
+            width: 40%;
+        }
+    }
+
+    .beneficios__lista{
+        div{
+            justify-content: space-evenly;
+            li{
+                width: 40% !important;
+            }
+        }
+    }
+
+    /* Contacto */
+
+    .contacto__info{
+        height: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"contacto_left"
+                            "contacto_right";
+    }
+
+    /* Quienes Somos */
+
+    .quienes_somos{
+        .quienes_somos__subtitle{
+            p{
+                width: 70vw;
+            }
+        }
+    }
+
+    .quienes_somos__info{
+        div{
+            height: 1250px;
+            list-style: none;
+            display: grid;
+            grid-template-rows: 300px 300px 350px 300px;
+            grid-template-columns: 1fr;
+            grid-template-areas:"texto1"
+                                "foto1"
+                                "texto2"
+                                "foto2";
+        }
+    }
+}
+
+@media (max-width: 648px) {
+    /* Mascotas */
+
+    .mascotas__nutricion__info{
+        height: 400px;
+        grid-template-rows: 1fr 140px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"nutricion_center"
+                            "nutricion_right";
+    }
+
+    .mascotas__nutricion__info--left{
+        display: none;
+    }
+
+    .mascotas__nutricion__info--center{
+        li{
+            width: 33%;
+        }
+    }
+
+    .mascotas__nutricion__info--right{
+        height: 100px;
+        flex-direction: row;
+        li{
+            img{
+                width: 80%;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 426px) {
+    body{
+        grid-template-rows: 150px 1fr 450px;
+    }
+
+    /* Header */
+
+    header{
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-rows: 90px 60px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"nav_img"
+                            "nav";
+        .header__img{
+            img{
+                height: 90px;
+            }
+        }
+        .header__nav{
+            grid-area: nav;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            li{
+                a{
+                    font-family: letraVerde;
+                    text-decoration: none;
+                    color: #78C232;
+                    font-size: .9rem;
+                }
+            }
+        }
+        
+    }
+
+    /* Index */
+    .index__img{
+        img{
+            width: 100%;
+        }
+    }
+
+    .index__info{
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: space-evenly;
+        height: 400px;
+        div{
+            width: 70%;
+        }
+    }
+
+    .beneficios__lista{
+        div{
+            height: 250px !important;
+            flex-direction: column !important;
+            justify-content: space-evenly !important;
+            li{
+                font-family: Arial, Helvetica, sans-serif;
+                width: 100%;
+            }
+        }
+    }
+
+    /* Alimentos */
+
+    .alimentos__autoservicio__info--grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .alimentos__autoservicio__info--left{
+        margin-bottom: 10px;
+    }
+
+    .alimentos__autoservicio__info--right{
+        margin-top: 10px;
+    }
+
+    .alimentos__autoservicio__info--left,
+    .alimentos__autoservicio__info--right,
+    .alimentos__autoservicio__info--center{
+        h4{
+            width: 80%;
+        }
+        p{
+            width: 80%;
+        }
+    }
+
+    /* Contacto */
+
+    .contacto__info--right{
+        li{
+            textarea{
+                padding: 10px 75px 10px 75px !important;
+            }
+        }
+    }
+
+    /* Mascotas */
+
+    .mascotas__nutricion__info--center{
+        li{
+            width: 50%;
+            a{
+                border-radius: 1rem;
+                padding: 2.5px 5px 2.5px 5px;
+            }
+        }
+    }
+
+    .mascotas__salud__info{
+        height: 360px;
+        grid-template-rows: 1fr 110px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"salud_center"
+                            "salud_right";
+    }
+
+    .mascotas__salud__info--left{
+        display: none;
+    }
+
+    .mascotas__salud__info--right{
+        height: 100px;
+        flex-direction: row;
+        li{
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    /* Quienes Somos */
+
+    .quienes_somos{
+        .quienes_somos__subtitle{
+            p{
+                width: 90vw;
+            }
+        }
+    }
+
+    .quienes_somos__foto1,
+    .quienes_somos__foto2{
+        img{
+            width: 90%;
+        }
+    }
+
+    .quienes_somos__texto1,
+    .quienes_somos__texto2{
+        p{
+            width: 90%;
+        }
+    }
+}

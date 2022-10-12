@@ -1,0 +1,86 @@
+/* Alimentos */
+
+.alimentos__img{
+    img{
+        width: 100%;
+    }
+}
+
+.alimentos__autoservicio{
+    margin-top: $margin/2;
+    #alimentos__autoservicio__title{
+        text-align: center;
+        font-family: letraSubtitulo;
+        margin-bottom: $margin;
+    }
+}
+
+.alimentos__autoservicio__info--grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.alimentos__autoservicio__info--left,
+.alimentos__autoservicio__info--right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 60%;
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 60%;
+    }
+}
+
+.alimentos__autoservicio__info--center{
+    margin-top: $margin/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    p{
+        text-align: center;
+        width: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.alimentos__saludable{
+    margin-top: $margin;
+    .alimentos__saludable__title{
+        text-align: center;
+        font-family: letraSubtitulo;
+        margin-bottom: $margin;
+    }
+}
+
+.alimentos__saludable__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .alimentos__saludable__info--btn{
+        a{
+            border: 1px solid black;
+            border-radius: 2rem;
+            padding: 15px 20px 15px 20px;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                background-color: #78C232;
+            }
+        }
+    }
+}

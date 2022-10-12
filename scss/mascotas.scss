@@ -1,0 +1,142 @@
+.main__mascotas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:"mascotas_img"
+                        "mascotas_nutricion"
+                        "mascotas_salud";
+}
+
+.mascotas__img{
+    grid-area: mascotas_img;
+    img{
+        width: 100%;
+    }
+}
+
+/* Nutricion */
+
+.mascotas__nutricion{
+    grid-area: mascotas_nutricion;
+    #mascotas__nutricion__title{
+        text-align: center;
+        font-family: letraSubtitulo;
+        margin-top: $margin/2;
+        margin-bottom: $margin;
+    }
+}
+
+.mascotas__nutricion__info{
+    height: 250px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-areas:"nutricion_left nutricion_center nutricion_right";
+}
+
+.mascotas__nutricion__info--left{
+    grid-area: nutricion_left;
+}
+
+.mascotas__nutricion__info--right{
+    grid-area: nutricion_right;
+}
+
+.mascotas__nutricion__info--center{
+    grid-area: nutricion_center;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    li{
+        width: 50%;
+        text-align: center;
+        a{
+            border: 1px solid black;
+            border-radius: 2rem;
+            padding: 15px 20px 15px 20px;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                background-color: #78C232;
+            }
+        }
+    }
+}
+
+.mascotas__nutricion__info--left,
+.mascotas__nutricion__info--right{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    li{
+        text-align: center;
+        img{
+            width: 80%;
+        }
+    }
+}
+
+/* Salud */
+
+.mascotas__salud{
+    grid-area: mascotas_salud;
+    #mascotas__salud__title{ 
+        text-align: center;
+        font-family: letraSubtitulo;
+        margin-top: $margin/2;
+        margin-bottom: $margin;
+    }
+}
+
+.mascotas__salud__info{
+    height: 250px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-areas:"salud_left salud_center salud_right";
+}
+
+.mascotas__salud__info--left{
+    grid-area: salud_left;
+}
+
+
+.mascotas__salud__info--right{
+    grid-area: salud_right;
+}
+
+.mascotas__salud__info--center{
+    grid-area: salud_center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    h3{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+}
+
+.mascotas__salud__info--left,
+.mascotas__salud__info--right{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    li{
+        text-align: center;
+        img{
+            width: 80%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+header{
+    display: grid;
+    grid-template-rows: 120px;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: "nav_img nav";
+    .header__img{
+        grid-area: nav_img;
+        text-align: center;
+        img{
+            height: 120px;
+        }
+    }
+    .header__nav{
+        grid-area: nav;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        li{
+            a{
+                font-family: letraVerde;
+                text-decoration: none;
+                color: #78C232;
+            }
+        }
+    }
+}

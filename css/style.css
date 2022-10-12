@@ -1,0 +1,699 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 120px 1fr 450px;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body main {
+  grid-area: main;
+}
+body footer {
+  grid-area: footer;
+}
+
+@font-face {
+  font-family: letraVerde;
+  src: url(../assets/fonts/Montserrat/static/Montserrat-Black.ttf);
+}
+@font-face {
+  font-family: letraSubTitulo;
+  src: url(../assets/fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+header {
+  display: grid;
+  grid-template-rows: 120px;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas: "nav_img nav";
+}
+header .header__img {
+  grid-area: nav_img;
+  text-align: center;
+}
+header .header__img img {
+  height: 120px;
+}
+header .header__nav {
+  grid-area: nav;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .header__nav li a {
+  font-family: letraVerde;
+  text-decoration: none;
+  color: #78C232;
+}
+
+.footer__ondas {
+  background-image: url(../assets/images/wave.svg);
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.footer__cuadrado {
+  background-color: #78C232;
+  width: 100%;
+  height: 150px;
+}
+.footer__cuadrado ul {
+  list-style: none;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__cuadrado ul li {
+  text-align: center;
+  font-family: letraVerde;
+  color: white;
+}
+
+.main__index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "index_img" "index_info" "beneficios";
+}
+
+.index__img {
+  grid-area: index_img;
+}
+.index__img img {
+  width: 100%;
+}
+
+.index__info {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  grid-area: index_info;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.index__info div {
+  width: 30%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.beneficios {
+  grid-area: beneficios;
+}
+.beneficios .beneficios__titulo {
+  text-align: center;
+  font-family: letraSubtitulo;
+  font-size: 2rem;
+}
+.beneficios .beneficios__lista div {
+  height: 200px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios__lista div li {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  text-align: center;
+}
+.beneficios .beneficios__lista div li img {
+  height: 150px;
+}
+
+/* Alimentos */
+.alimentos__img img {
+  width: 100%;
+}
+
+.alimentos__autoservicio {
+  margin-top: 30px;
+}
+.alimentos__autoservicio #alimentos__autoservicio__title {
+  text-align: center;
+  font-family: letraSubtitulo;
+  margin-bottom: 60px;
+}
+
+.alimentos__autoservicio__info--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.alimentos__autoservicio__info--left,
+.alimentos__autoservicio__info--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.alimentos__autoservicio__info--left h4,
+.alimentos__autoservicio__info--right h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 60%;
+}
+.alimentos__autoservicio__info--left p,
+.alimentos__autoservicio__info--right p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 60%;
+}
+
+.alimentos__autoservicio__info--center {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.alimentos__autoservicio__info--center h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.alimentos__autoservicio__info--center p {
+  text-align: center;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.alimentos__saludable {
+  margin-top: 60px;
+}
+.alimentos__saludable .alimentos__saludable__title {
+  text-align: center;
+  font-family: letraSubtitulo;
+  margin-bottom: 60px;
+}
+
+.alimentos__saludable__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.alimentos__saludable__info .alimentos__saludable__info--btn a {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+  color: black;
+}
+.alimentos__saludable__info .alimentos__saludable__info--btn a:hover {
+  background-color: #78C232;
+}
+
+.contacto__img img {
+  width: 100%;
+}
+
+.contacto {
+  margin-top: 30px;
+}
+.contacto form h1 {
+  text-align: center;
+  font-family: letraSubtitulo;
+  margin-bottom: 60px;
+}
+
+.contacto__info {
+  list-style: none;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "contacto_left contacto_right";
+}
+
+.contacto__info--left,
+.contacto__info--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contacto__info--left {
+  grid-area: contacto_left;
+}
+.contacto__info--left li input {
+  background-color: greenyellow;
+  border-color: greenyellow;
+  border-radius: 0.5rem;
+  padding: 10px 100px 10px 100px;
+}
+.contacto__info--left li input:hover {
+  background-color: #78C232;
+  border-color: #78C232;
+}
+
+.contacto__info--right {
+  grid-area: contacto_right;
+}
+.contacto__info--right li textarea {
+  background-color: greenyellow;
+  border-color: greenyellow;
+  border-radius: 0.5rem;
+  padding: 10px 100px 10px 100px;
+}
+.contacto__info--right li textarea:hover {
+  background-color: #78C232;
+  border-color: #78C232;
+}
+
+.contacto__boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto__boton input {
+  border-color: greenyellow;
+  border-radius: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: greenyellow;
+}
+.contacto__boton input:hover {
+  background-color: #78C232;
+  border-color: #78C232;
+}
+
+.main__mascotas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "mascotas_img" "mascotas_nutricion" "mascotas_salud";
+}
+
+.mascotas__img {
+  grid-area: mascotas_img;
+}
+.mascotas__img img {
+  width: 100%;
+}
+
+/* Nutricion */
+.mascotas__nutricion {
+  grid-area: mascotas_nutricion;
+}
+.mascotas__nutricion #mascotas__nutricion__title {
+  text-align: center;
+  font-family: letraSubtitulo;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.mascotas__nutricion__info {
+  height: 250px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-areas: "nutricion_left nutricion_center nutricion_right";
+}
+
+.mascotas__nutricion__info--left {
+  grid-area: nutricion_left;
+}
+
+.mascotas__nutricion__info--right {
+  grid-area: nutricion_right;
+}
+
+.mascotas__nutricion__info--center {
+  grid-area: nutricion_center;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mascotas__nutricion__info--center li {
+  width: 50%;
+  text-align: center;
+}
+.mascotas__nutricion__info--center li a {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+  color: black;
+}
+.mascotas__nutricion__info--center li a:hover {
+  background-color: #78C232;
+}
+
+.mascotas__nutricion__info--left,
+.mascotas__nutricion__info--right {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mascotas__nutricion__info--left li,
+.mascotas__nutricion__info--right li {
+  text-align: center;
+}
+.mascotas__nutricion__info--left li img,
+.mascotas__nutricion__info--right li img {
+  width: 80%;
+}
+
+/* Salud */
+.mascotas__salud {
+  grid-area: mascotas_salud;
+}
+.mascotas__salud #mascotas__salud__title {
+  text-align: center;
+  font-family: letraSubtitulo;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.mascotas__salud__info {
+  height: 250px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-areas: "salud_left salud_center salud_right";
+}
+
+.mascotas__salud__info--left {
+  grid-area: salud_left;
+}
+
+.mascotas__salud__info--right {
+  grid-area: salud_right;
+}
+
+.mascotas__salud__info--center {
+  grid-area: salud_center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.mascotas__salud__info--center p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.mascotas__salud__info--center h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.mascotas__salud__info--left,
+.mascotas__salud__info--right {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mascotas__salud__info--left li,
+.mascotas__salud__info--right li {
+  text-align: center;
+}
+.mascotas__salud__info--left li img,
+.mascotas__salud__info--right li img {
+  width: 80%;
+}
+
+.main__quienes_somos {
+  display: grid;
+  grid-template-areas: "quienes_somos_img" "quienes_somos";
+}
+
+.quienes_somos__img {
+  grid-area: quienes_somos_img;
+}
+.quienes_somos__img img {
+  width: 100%;
+}
+
+.quienes_somos {
+  margin-top: 30px;
+  width: 100vw;
+  grid-area: quienes_somos;
+}
+.quienes_somos h1 {
+  text-align: center;
+  font-family: letraSubtitulo;
+}
+.quienes_somos .quienes_somos__subtitle {
+  width: 100vw;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quienes_somos .quienes_somos__subtitle p {
+  width: 50vw;
+  text-align: center;
+  font-family: arial;
+}
+
+.quienes_somos__info div {
+  height: 800px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "foto1 texto1" "texto2 foto2";
+}
+
+.quienes_somos__foto1 {
+  grid-area: foto1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quienes_somos__foto1 img {
+  width: 60%;
+}
+
+.quienes_somos__texto1 {
+  grid-area: texto1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quienes_somos__texto1 p {
+  text-align: center;
+  width: 70%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.quienes_somos__texto2 {
+  grid-area: texto2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quienes_somos__texto2 h2 {
+  font-family: letraSubtitulo;
+}
+.quienes_somos__texto2 p {
+  text-align: center;
+  width: 70%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.quienes_somos__foto2 {
+  grid-area: foto2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quienes_somos__foto2 img {
+  width: 60%;
+}
+
+@media (max-width: 769px) {
+  /* Header */
+  header {
+    grid-template-areas: 0.25fr 1.75fr;
+  }
+  /* Index */
+  .index__info div {
+    width: 40%;
+  }
+  .beneficios__lista div {
+    justify-content: space-evenly;
+  }
+  .beneficios__lista div li {
+    width: 40% !important;
+  }
+  /* Contacto */
+  .contacto__info {
+    height: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "contacto_left" "contacto_right";
+  }
+  /* Quienes Somos */
+  .quienes_somos .quienes_somos__subtitle p {
+    width: 70vw;
+  }
+  .quienes_somos__info div {
+    height: 1250px;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 300px 300px 350px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "texto1" "foto1" "texto2" "foto2";
+  }
+}
+@media (max-width: 648px) {
+  /* Mascotas */
+  .mascotas__nutricion__info {
+    height: 400px;
+    grid-template-rows: 1fr 140px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "nutricion_center" "nutricion_right";
+  }
+  .mascotas__nutricion__info--left {
+    display: none;
+  }
+  .mascotas__nutricion__info--center li {
+    width: 33%;
+  }
+  .mascotas__nutricion__info--right {
+    height: 100px;
+    flex-direction: row;
+  }
+  .mascotas__nutricion__info--right li img {
+    width: 80%;
+  }
+}
+@media (max-width: 426px) {
+  body {
+    grid-template-rows: 150px 1fr 450px;
+  }
+  /* Header */
+  header {
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-rows: 90px 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav_img" "nav";
+  }
+  header .header__img img {
+    height: 90px;
+  }
+  header .header__nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header .header__nav li a {
+    font-family: letraVerde;
+    text-decoration: none;
+    color: #78C232;
+    font-size: 0.9rem;
+  }
+  /* Index */
+  .index__img img {
+    width: 100%;
+  }
+  .index__info {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: space-evenly;
+    height: 400px;
+  }
+  .index__info div {
+    width: 70%;
+  }
+  .beneficios__lista div {
+    height: 250px !important;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+  }
+  .beneficios__lista div li {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+  }
+  /* Alimentos */
+  .alimentos__autoservicio__info--grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .alimentos__autoservicio__info--left {
+    margin-bottom: 10px;
+  }
+  .alimentos__autoservicio__info--right {
+    margin-top: 10px;
+  }
+  .alimentos__autoservicio__info--left h4,
+.alimentos__autoservicio__info--right h4,
+.alimentos__autoservicio__info--center h4 {
+    width: 80%;
+  }
+  .alimentos__autoservicio__info--left p,
+.alimentos__autoservicio__info--right p,
+.alimentos__autoservicio__info--center p {
+    width: 80%;
+  }
+  /* Contacto */
+  .contacto__info--right li textarea {
+    padding: 10px 75px 10px 75px !important;
+  }
+  /* Mascotas */
+  .mascotas__nutricion__info--center li {
+    width: 50%;
+  }
+  .mascotas__nutricion__info--center li a {
+    border-radius: 1rem;
+    padding: 2.5px 5px 2.5px 5px;
+  }
+  .mascotas__salud__info {
+    height: 360px;
+    grid-template-rows: 1fr 110px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "salud_center" "salud_right";
+  }
+  .mascotas__salud__info--left {
+    display: none;
+  }
+  .mascotas__salud__info--right {
+    height: 100px;
+    flex-direction: row;
+  }
+  .mascotas__salud__info--right li img {
+    width: 80%;
+  }
+  /* Quienes Somos */
+  .quienes_somos .quienes_somos__subtitle p {
+    width: 90vw;
+  }
+  .quienes_somos__foto1 img,
+.quienes_somos__foto2 img {
+    width: 90%;
+  }
+  .quienes_somos__texto1 p,
+.quienes_somos__texto2 p {
+    width: 90%;
+  }
+}
